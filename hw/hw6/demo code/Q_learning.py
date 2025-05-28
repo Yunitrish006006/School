@@ -5,7 +5,7 @@ import pandas as pd
 import os
 import time
 from tqdm import tqdm
-from numba import jit
+# from numba import jit
 try:
     
     HAS_NUMBA = True
@@ -282,7 +282,7 @@ class OptimizedAgent:
 def test_epsilon_performance(agent_class=OptimizedAgent):
     """Test performance with different epsilon values"""
     print("\n===== Testing Epsilon Performance =====")
-    epsilons = np.linspace(0, 1, 5)  # 0.0, 0.25, 0.5, 0.75, 1.0
+    epsilons = np.linspace(0, 1, 100)  # 0.0, 0.25, 0.5, 0.75, 1.0
     times = []
     test_episodes = 1000  # Significantly reduced for faster testing
     
